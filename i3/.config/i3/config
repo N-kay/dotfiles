@@ -153,14 +153,14 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-	colors {
-		background $bg-color
-	    	separator #757575
-		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
+  colors {
+    background $bg-color
+        separator #757575
+    #                  border             background         text
+    focused_workspace  $bg-color          $bg-color          $text-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+  }
 }
 
 # Custom keybinds
@@ -179,17 +179,17 @@ new_window pixel 2
 hide_edge_borders smart
 
 #Colors
-set $bg-color 	         #2f343f
-set $active-color	 #5294e2
-set $inactive-bg-color   #3c3836
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #FF8939
-set $indicator-color	 #B8D68C
+set $bg-color             #2f343f
+set $active-color         #5294e2
+set $inactive-bg-color    #3c3836
+set $text-color           #f3f4f5
+set $inactive-text-color  #676E7D
+set $urgent-bg-color      #FF8939
+set $indicator-color      #B8D68C
 
 # window colors
-#                       border              background         text                 indicator
-client.focused          $active-color       $active-color      $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+#                       border              background          text                 indicator
+client.focused          $active-color       $active-color       $text-color           #00ff00
+client.unfocused        $inactive-bg-color  $inactive-bg-color  $inactive-text-color  #00ff00
+client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color  #00ff00
+client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color           #00ff00

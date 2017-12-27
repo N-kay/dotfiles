@@ -1,108 +1,65 @@
-! vim: set filetype=xdefaults :
-!*foreground: #D7D0C7
-!*background: #151515
+URxvt.resize-font.smaller:  C-Down
+URxvt.resize-font.bigger:   C-Up
+URxvt.iso14755:             false
+URxvt.iso14755_52:          false
+URxvt.scrollBar:            false
+URxvt.font:                 xft:Roboto Mono:size=9
 
-!black
-! *color0:     #AF875F
-! *color8:     #AF875F
-!*color0:     #101010
-!*color8:     #404040
-!red
-!*color1:     #E84F4F
-!*color9:     #D23D3D
-!green
-!*color2:     #B8D68C
-!*color10:    #A0CF5D
-!yellow
-!*color3:     #E1AA5D
-!*color11:    #F39D21
-!blue
-!color4:     #7DC1CF
-!color12:    #4E9FB1
-!magenta
-!*color5:     #9B64FB
-!*color13:    #8542FF
-!cyan
-!*color6:     #6D878D
-!*color14:    #42717B
-!white
-!*color7:     #dddddd
-!*color15:    #dddddd
-
-!URxvt*borderColor:        #151515
-!URxvt*colorBD:            #ffffff
-!URxvt*cursorColor:        #ff8939
-!URxvt*cursorColor2:       #151515
-
-URxvt.resize-font.smaller: C-Down
-URxvt.resize-font.bigger: C-Up
-URxvt.iso14755: false
-URxvt.iso14755_52: false
-URxvt.scrollBar: false
-URxvt.font: xft:Roboto Mono:size=9
 
 ! terminal padding
-URxvt.internalBorder: 5
+URxvt.internalBorder:       5
  
 ! uncomment for transparent terminal if you are ready to be made fun of in #rice
 ! URxvt.transparent:    true
 ! URxvt.shading:                15
  
 ! make otf / ttf fonts look pretty.  does not matter if you are using a bitmap font.
-Xft.autohint: 0
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintslight
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
+Xft.dpi:                    96
+Xft.autohint:               0
+Xft.lcdfilter:              lcddefault
+Xft.hintstyle:              hintslight
+Xft.hinting:                1
+Xft.antialias:              1
+Xft.rgba:                   rgb
  
 ! clickable links, clipboard support, mouse wheel support, and on the fly font resizing
 ! you will need to install the relevent perl extensions for these to work
-URxvt.perl-ext-common: default,matcher,clipboard,vtwheel,resize-font
-URxvt.url-launcher: /usr/bin/firefox
-URxvt.matcher.button: 1
-URxvt.matcher.rend.0: Uline Bold fg5
+URxvt.perl-ext-common:      default,matcher,clipboard,vtwheel,resize-font
+URxvt.url-launcher:         /usr/bin/firefox
+URxvt.matcher.button:       1
+URxvt.matcher.rend.0:       Uline Bold fg5
  
-! colors
-!*.cursorColor:  #b3bdcb
-!*.background: #404552
-!*.foreground: #b3bdcb
-! Black + DarkGrey
-!*.color0:  #404552
-!*.color8:  #2a303b
 
-! vim: set filetype=xdefaults :
-*foreground: #D7D0C7
-*background: #151515
+! colors
+*foreground:                #D7D0C7
+*background:                #151515
 
 !black
-! *color0:     #AF875F
-! *color8:     #AF875F
-*color0:     #101010
-*color8:     #404040
+*color0:                    #101010
+*color8:                    #404040
 !red
-*color1:     #E84F4F
-*color9:     #D23D3D
+*color1:                    #E84F4F
+*color9:                    #D23D3D
 !green
-*color2:     #B8D68C
-*color10:    #A0CF5D
+*color2:                    #B8D68C
+*color10:                   #A0CF5D
 !yellow
-*color3:     #E1AA5D
-*color11:    #F39D21
+*color3:                    #E1AA5D
+*color11:                   #F39D21
 !blue
-*color4:     #7DC1CF
-*color12:    #4E9FB1
+*color4:                    #7DC1CF
+*color12:                   #4E9FB1
 !magenta
-*color5:     #9B64FB
-*color13:    #8542FF
+*color5:                    #9B64FB
+*color13:                   #8542FF
 !cyan
-*color6:     #6D878D
-*color14:    #42717B
+*color6:                    #6D878D
+*color14:                   #42717B
 !white
-*color7:     #dddddd
-*color15:    #dddddd
+*color7:                    #dddddd
+*color15:                   #dddddd
 
-URxvt*borderColor:        #151515
-URxvt*colorBD:            #ffffff
-URxvt*cursorColor:        #ff8939
-URxvt*cursorColor2:       #151515
+URxvt*borderColor:          #151515
+URxvt*colorBD:              #ffffff
+URxvt*cursorColor:          #ff8939
+URxvt*cursorColor2:         #151515
