@@ -99,3 +99,8 @@ export VDPAU_DRIVER="va_gl"
 export EDITOR="vim"
 export JAVA_HOME="/usr/lib/jvm/default"
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+export M2_HOME="/opt/maven"
+export M2="$M2_HOME/bin"
+export PATH="$M2:$PATH"
+
+alias tb="nc termbin.com 9999"

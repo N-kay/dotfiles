@@ -177,6 +177,8 @@ bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures
 # Custom config
 new_window pixel 2
 hide_edge_borders smart
+exec compton -CGb --config ~/.config/compton.conf
+exec-once i3lock-fancy -p -- scrot z
 
 #Colors
 set $bg-color             #2f343f
