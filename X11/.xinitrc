@@ -3,4 +3,4 @@ export SSH_AUTH_SOCK
 dbus-update-activation-environment --systemd DISPLAY
 
 udiskie -t &
-exec i3 --shmlog-size=26214400
+exec i3
