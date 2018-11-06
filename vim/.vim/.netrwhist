@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/nkay/.config'
 let g:netrw_dirhist_2='/home/nkay/.config/i3status'
 let g:netrw_dirhist_3='/home/nkay/.config/i3'
 let g:netrw_dirhist_4='/home/nkay/.config/google-chrome'
 let g:netrw_dirhist_5='/home/nkay/dotfiles/dunst/.config/dunst/dunstrc'
+let g:netrw_dirhist_6='/home/nkay/dotfiles/i3/.config/i3'
