@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/nkay/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -24,7 +24,7 @@ ZSH_THEME="bira"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -62,7 +62,6 @@ plugins=(
   git
 )
 
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -93,13 +92,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR  ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
+
+source $ZSH/oh-my-zsh.sh
+
 #Custom shit
-export LIBVA_DRIVER_NAME="i965"
-export VDPAU_DRIVER="va_gl"
 export EDITOR="vim"
 export JAVA_HOME="/usr/lib/jvm/default"
 export M2_HOME="/opt/maven"
 export M2="$M2_HOME/bin"
-export PATH="$(ruby -e 'print Gem.user_dir')/bin:$M2:$PATH"
-
+#export PATH="$(ruby -e 'print Gem.user_dir')/bin:$M2:$PATH"
 alias tb="nc termbin.com 9999"
