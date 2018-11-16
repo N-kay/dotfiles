@@ -1,20 +1,11 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
   export ZSH=/home/nkay/.oh-my-zsh
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
 ZSH_THEME="bira"
-
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -39,7 +30,7 @@ ZSH_THEME="bira"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -58,31 +49,30 @@ ZSH_THEME="bira"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-)
-
-source $ZSH/oh-my-zsh.sh
+plugins=(git adb archlinux systemd)
 
 # User configuration
 
+  export PATH="/opt/npm/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -92,14 +82,19 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-#Custom shit
-export LIBVA_DRIVER_NAME="i965"
-export VDPAU_DRIVER="va_gl"
-export EDITOR="vim"
-export JAVA_HOME="/usr/lib/jvm/default"
-export M2_HOME="/opt/maven"
-export M2="$M2_HOME/bin"
-export PATH="$(ruby -e 'print Gem.user_dir')/bin:$M2:$PATH"
+alias fuckwin="killall kwin_x11 && DISPLAY=:0 kwin_x11 --replace"
+alias rntv='filebot -rename . --db TheTVDB --lang de --format "{n} - {s00e00} - {t}" -non-strict'
+alias share='zsh ~/share.sh'
+alias getpack='java -jar ~/mpdl.jar'
+function dts2ac3(){
+	if [ "$1" != "" ]; then
+		filename=$(basename "$1")
+		extension="${filename##*.}"
+		filename="${filename%.*}"
+		ffmpeg -i "${filename}"."${extension}" -map 0 -c:v copy -c:s copy -c:a ac3 -b:a 640k "${filename}"-AC3."${extension}"
+	else
+		echo No input given
+	fi
+}
 
-alias tb="nc termbin.com 9999"
+export JAVA_HOME=/usr/lib/jvm/default
