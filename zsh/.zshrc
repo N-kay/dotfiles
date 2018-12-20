@@ -103,3 +103,5 @@ export M2="$M2_HOME/bin"
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$M2:$PATH"
 
 alias tb="nc termbin.com 9999"
+alias fixmouse="sudo modprobe -r psmouse && sudo modprobe psmouse"
+alias mounthshome="sshfs nbohl001@login1.cs.hs-rm.de: ~/hshome"
